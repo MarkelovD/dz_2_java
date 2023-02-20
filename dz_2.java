@@ -20,7 +20,7 @@ public class dz_2 {
         }
         return result;
     }
-    
+
     static int[] ReadFile() throws FileNotFoundException{ 
         int [] array= new int [2];
         int i = 0;
@@ -31,5 +31,15 @@ public class dz_2 {
     }
         }
         return array;
+    }
+    static void WriteFile() throws FileNotFoundException{
+        String result = Integer.toString(PowNums(ReadFile()));
+        try (FileWriter writer = new FileWriter("output.txt",false)){
+            writer.write(result);
+            writer.flush(); 
+        } catch (Exception e) {
+            System.out.println(e.getMessage());
+        }
+    
     }
 }
