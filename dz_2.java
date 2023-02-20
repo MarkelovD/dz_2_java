@@ -4,6 +4,11 @@ import java.io.FileWriter;
 import java.util.Scanner;
 
 public class dz_2 {
+
+    public static void main(String[] args) throws FileNotFoundException{
+        WriteFile();
+    }
+    
     static int PowNums(int args[]){
         int  result = 1;
         int deg = args[1];
